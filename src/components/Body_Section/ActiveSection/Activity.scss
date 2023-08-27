@@ -1,0 +1,180 @@
+$PrimaryColor: rgb(173, 114, 59);
+$HoverColor: rgb(67, 185, 67);
+$paleGreen: rgb(181, 231, 181);
+$whiteColor: rgb(241, 241, 241);
+$blackColor: rgb(15, 15, 15);
+$textColor: rgb(116, 116, 116);
+$bgColor: hsl(220, 10%, 94%);
+$greyText: rgb(190, 190, 190);
+$inputColor: hsl(330, 12%, 97%);
+$itemCardColor: hsl(120, 5%, 88%);
+$itemCardHover: hsl(120, 27%, 87%);
+
+
+
+// Font and Typography
+
+$biggestFontSize: 2.5rem;
+$h1FontSize: 1.5rem;
+$h2FontSize: 1.2rem;
+$h3FontSize: 1rem;
+$normalFontSize: .938rem;
+$smallFontSize: .813rem;
+$smallestFontSize: .75rem;
+
+
+.activitySection {
+    flex-basis: 50%;
+
+    .heading {
+        width: 100%;
+        justify-content: space-between;
+
+        h1 {
+            font-size: $h2FontSize;
+            color: $blackColor;
+            font-weight: 700;
+        }
+
+        .btn {
+            border: 1px solid transparent;
+
+            &:hover {
+                border: 1px solid $PrimaryColor;
+
+            }
+            
+        }
+
+        
+    }
+
+
+    .secContainer {
+        margin-top: 1rem;
+
+        .singleCustomer {
+            align-items: flex-start;
+            justify-content: space-between;
+
+            img {
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+                border-radius: 50%;
+                box-shadow: 0 2px 4px $itemCardColor;
+                margin-right: 1rem;
+            }
+
+            .costumerDetails {
+                flex: 1;
+
+                .name {
+                    font-size: $h3FontSize; 
+                    font-weight: 600;
+                    color: $blackColor;
+                    display: block;
+
+                }
+
+                small {
+                    font-weight: 500;
+                    color: $textColor;
+                    font-size: $smallFontSize;
+
+                }
+
+            }
+        }
+
+    }
+
+    
+}
+
+
+.sideBarCard {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+
+    .icon {
+        position: absolute;
+        background-color: $HoverColor;
+        border: 10px solid $whiteColor;
+        font-size: 3rem;
+        border-radius: 50%;
+        top: -8px;
+        right: 50%;
+        transform: translate(50%);
+        z-index: 100;
+    }
+
+    .cardContent {
+        position: relative;
+        padding: 1rem;
+        background-color: $HoverColor;
+        border-radius: 10px;
+        overflow: hidden;
+
+        h3 {
+            font-size: $h3FontSize;
+            margin-top: 1rem;
+            padding: 1rem 0;
+            font-weight: 800;
+            color: $blackColor;
+        }
+
+        p {
+            font-size: $normalFontSize;
+            color: $textColor;
+            padding-bottom: 1rem;
+            font-weight: 500;
+
+        }
+
+        .btn {
+            position: relative;
+            color: $textColor;
+            z-index: 1000;
+        }
+
+        .circle1, .circle2 {
+            position: absolute;
+            background-color: $paleGreen;
+            border-radius: 50%;
+            opacity: .7;
+        }
+
+        .circle1 {
+            height: 100px;
+            width: 100px;
+            top: -50px;
+            left: -50px;
+
+        }
+
+        .circle2 {
+            height: 150px;
+            width: 150px;
+            bottom: -80px;
+            right: -70px;
+            z-index: 1;
+
+        }
+        
+    }
+
+}
+
+
+//  Media Queries
+
+@media screen and (max-width: 918px) {
+    .activitySection {
+        width: 100%;
+    }
+
+    
+}

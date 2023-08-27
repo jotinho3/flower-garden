@@ -1,0 +1,196 @@
+$PrimaryColor: rgb(192, 0, 0);
+$HoverColor: rgb(67, 185, 67);
+$paleGreen: rgb(181, 231, 181);
+$whiteColor: rgb(255, 255, 255);
+$blackColor: rgb(15, 15, 15);
+$textColor: rgb(116, 116, 116);
+$bgColor: hsl(220, 10%, 94%);
+$greyText: rgb(190, 190, 190);
+$inputColor: hsl(330, 12%, 97%);
+$itemCardColor: rgb(236, 214, 214);
+$itemCardHover: rgb(231, 181, 181);
+
+// Font and Typography
+
+$biggestFontSize: 2.5rem;
+$h1FontSize: 1.5rem;
+$h2FontSize: 1.2rem;
+$h3FontSize: 1rem;
+$normalFontSize: .938rem;
+$smallFontSize: .813rem;
+$smallestFontSize: .75rem;
+
+
+.listiningSection {
+    flex-basis: 70%;
+
+    .heading {
+        width: 100%;
+        justify-content: space-between;
+
+        h1 {
+            font-size: $h2FontSize;
+            color: $blackColor;
+            font-weight: 700;
+        }
+
+        .btn {
+            border: 1px solid transparent;
+            font-weight: 500;
+
+        }
+
+        .btn:hover {
+            border: 1px solid $PrimaryColor;
+
+        }
+    }
+
+    .secContainer {
+        width: 100%;
+        margin: 1rem 0;
+        gap: 1rem;
+        flex-wrap: wrap ;
+
+        .singleItem {
+            position: relative;
+            width: 140px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 1rem;
+            border-radius: 10px;
+            background-color: $itemCardColor;
+
+            &:hover {
+                background-color: $itemCardHover;
+                box-shadow: 0 2px 2px $inputColor;
+            }
+
+            img {
+                max-width: 100px;
+                max-height: 130px;
+                min-height: 120px;
+                object-fit: contain;
+            }
+
+            .icon {
+                position: absolute; 
+                top: 10px;
+                right: 10px;
+                color: $PrimaryColor;
+
+                
+                &:hover {
+                   transform: scale(110%);
+                }
+            }
+
+            h3 {
+                font-size: $h3FontSize;
+                color: $blackColor;
+                padding: 1rem 0;
+            }
+        }
+    }
+
+    .sellers {
+        width: 100%;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: flex-start;
+
+        .topSellers, .featuredSellers {
+            .heading {
+                padding: 1.5rem 0;
+
+                .btn {
+                    padding: .5rem 1rem;
+                }
+            }
+
+            .card {
+                padding: 1.5rem 4.9rem;
+                border-radius: 1rem;
+                background-color: $whiteColor;
+                gap: 1rem;
+                box-shadow: 0 2px 4px $inputColor;
+
+                .users {
+                    padding-right: 1rem;
+                    border-right: 2px solid $greyText;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        border: 2px solid $inputColor;
+                        transition: .5s ease;
+
+                        &:hover {
+                            transform: translateY(-10px);
+                        }
+                    }
+                }
+
+                .cardText {
+                    span {
+                        color: $blackColor;
+                        font-weight: 500;
+
+                        small {
+                            font-weight: 400;
+
+                            .date {
+                                margin-left: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+// Media queries
+
+@media screen and (max-width: 990px) {
+    .listiningSection {
+        .sellers {
+            .card {
+                flex-direction: column;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 918px) {
+    .listiningSection {
+       .singleItem {
+        width: 100% !important;
+
+       }
+        
+    }
+    
+}
+
+@media screen and (max-width: 490px) {
+    .listiningSection {
+        .sellers {
+            flex-direction: column;
+
+            .card {
+                flex-direction: row;
+               
+            }
+        }
+       
+        
+    }
+    
+}
